@@ -40,7 +40,7 @@ void YTcpClient::initialize()
     m_timer = new QTimer(this);
     m_timer->setInterval(1000);
     connect(m_timer, &QTimer::timeout, this, &YTcpClient::timerTimeout);
-    m_timer->start();
+//    m_timer->start();
 
     m_client = new QTcpSocket();
     connect(m_client, &QTcpSocket::readyRead, this, &YTcpClient::receiveMessage);
